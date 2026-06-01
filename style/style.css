@@ -1,0 +1,131 @@
+@layer base, components, utils;
+@import url("../common/design-system.css") layer(base);
+@import url("../common/design-system-utils.css") layer(utils);
+
+@layer base {
+  :root {
+    --body-width: 40rem;
+    --outer-spacing-y: 0;
+    --tint: 16;
+  }
+}
+
+@layer components {
+  .counters {
+    ul {
+      display: grid;
+      gap: 1rem;
+      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter {
+      all: unset;
+      background: var(--c-surface-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-elevation-medium);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      line-height: 1;
+      padding: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+
+      &:is(:focus-visible, :hover) {
+        color: var(--c-fg);
+        outline: var(--outline);
+      }
+
+      .count {
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-medium);
+      }
+    }
+
+    button {
+      background-color: var(--c-surface-variant-bg);
+      border: var(--border-width) solid var(--c-border);
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .counterDetail {
+    .counter {
+      --counter-bg: light-dark(var(--neutral-900), var(--neutral-100));
+      --counter-border: light-dark(var(--neutral-600), var(--neutral-300));
+      --counter-fg: light-dark(var(--neutral-50), var(--neutral-900));
+      --counter-shadow: light-dark(var(--neutral-400), var(--neutral-950));
+
+      background: var(--counter-bg);
+      border-radius: calc(var(--border-radius-large) * 1.25);
+      box-shadow: 0 0.5rem 1.5rem -0.5rem var(--counter-shadow);
+      color: var(--counter-fg);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "counter counter" "control-left control-right";
+      line-height: 1;
+      overflow: hidden;
+
+      .count {
+        align-items: center;
+        border-bottom: var(--border-width-large) dashed var(--counter-border);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        grid-area: counter;
+        justify-content: center;
+        margin-inline: 1rem;
+        padding-block: 1.5rem;
+      }
+
+      button {
+        all: unset;
+        align-items: center;
+        display: flex;
+        font-size: var(--font-size-h2);
+        justify-content: center;
+        padding: 1rem;
+
+        &:first-child {
+          grid-area: control-left;
+        }
+
+        &:last-child {
+          grid-area: control-right;
+        }
+      }
+
+      @media (width >= 480px) {
+        grid-template-columns: 6rem auto 6rem;
+        grid-template-areas: "control-left counter control-right";
+
+        .count {
+          border-bottom: none;
+          border-inline: var(--border-width-large) dashed var(--counter-border);
+          margin: 1rem 0;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+
+    .updatedAt {
+      align-items: center;
+      color: var(--c-fg-variant);
+      display: flex;
+      gap: 0.75ch;
+      justify-content: center;
+    }
+  }
+}
+
+@layer utils {
+  .list-none {
+    list-style-type: none;
+    padding: 0;
+  }
+}
