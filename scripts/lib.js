@@ -47,6 +47,8 @@ export function formatDateTime(dateStr) {
 function createCounterStore() {
   const counters = ref([]);
 
+  const sortedCounters = computed(() => counters.value.sort((a, b) => b.count - a.count));
+
   /**
    * @param {string} name
    * @returns {string}
@@ -121,7 +123,7 @@ function createCounterStore() {
   loadFromStorage();
 
   return () => ({
-    counters,
+    counters: sortedCounters,
     createCounter: create,
     decrementCounter: decrement,
     incrementCounter: increment,
