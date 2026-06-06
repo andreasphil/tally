@@ -1,8 +1,9 @@
-import { prompt } from "@common/cap.js";
-import "@common/temporal-polyfill-global.min.js";
-import { createApp, defineComponent, ref } from "@common/vue.runtime.esm-browser.prod.js";
+import "temporal-polyfill/global";
+import { createApp, defineComponent, ref } from "vue";
+import { prompt } from "../common/cap.js";
 import { Blocks, Check, History, Minus, Plus, SquarePen, Trash2 } from "./icons.js";
-import { formatDateTime, html, useCounter, useCounters } from "./lib.js";
+import { html } from "./lib.js";
+import { formatDateTime, useCounter, useCounters } from "./store.js";
 
 const App = defineComponent({
   setup() {
@@ -108,6 +109,8 @@ const App = defineComponent({
                     Delete
                   </button>
 
+                  <div></div>
+
                   <button variant="secondary" commandfor="counter-dialog" command="close">
                     <span innerHTML=${Check}></span>
                     Done
@@ -120,7 +123,7 @@ const App = defineComponent({
             <hgroup class="text-center margin-y-body" style="--outer-spacing-y: 2rem;">
               <img
                 class="rounded-squircle shadow-high"
-                src="./assets/icon-192.png"
+                src="./icon-192.png"
                 width="72"
                 height="72"
               />

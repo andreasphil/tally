@@ -1,6 +1,7 @@
 @layer base, components, utils;
-@import url("../common/design-system.css") layer(base);
-@import url("../common/design-system-utils.css") layer(utils);
+
+@import "@andreasphil/design-system/style.css" layer(base);
+@import "@andreasphil/design-system/utils.css" layer(utils);
 
 @layer base {
   :root {
@@ -61,7 +62,7 @@
       --counter-shadow: light-dark(var(--neutral-400), var(--neutral-950));
 
       background: var(--counter-bg);
-      border-radius: calc(var(--border-radius-large) * 1.25);
+      border-radius: var(--border-radius-large);
       box-shadow: 0 0.5rem 1.5rem -0.5rem var(--counter-shadow);
       color: var(--counter-fg);
       display: grid;
