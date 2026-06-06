@@ -27,8 +27,7 @@
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      line-height: 1;
+      gap: 0.75ch;
       padding: 1.5rem;
       text-align: center;
       text-decoration: none;
@@ -68,7 +67,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: "counter counter" "control-left control-right";
-      line-height: 1;
       overflow: hidden;
 
       .count {
@@ -76,7 +74,7 @@
         border-bottom: var(--border-width-large) dashed var(--counter-border);
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.75ch;
         grid-area: counter;
         justify-content: center;
         margin-inline: 1rem;
