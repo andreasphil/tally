@@ -7,8 +7,8 @@
   "dependencies": {
     "@andreasphil/design-system": "github:andreasphil/design-system#v0.60.0",
     "htm": "^3.1.1",
-    "temporal-polyfill": "^0.3.2",
-    "vue": "^3.5.35"
+    "temporal-polyfill": "^1.0.1",
+    "vue": "^3.5.38"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
