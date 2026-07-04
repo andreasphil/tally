@@ -8,10 +8,10 @@
     "@andreasphil/design-system": "github:andreasphil/design-system#v0.60.0",
     "htm": "^3.1.1",
     "temporal-polyfill": "^1.0.1",
-    "vue": "^3.5.38"
+    "vue": "^3.5.39"
   },
   "devDependencies": {
     "typescript": "^6.0.3",
-    "vite": "^8.0.16"
+    "vite": "^8.1.3"
   }
 }
