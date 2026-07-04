@@ -116,7 +116,8 @@
       align-items: center;
       color: var(--c-fg-variant);
       display: flex;
-      gap: 0.75ch;
+      font-size: var(--font-size-small);
+      gap: 0.5ch;
       justify-content: center;
     }
   }

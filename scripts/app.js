@@ -95,7 +95,7 @@ const App = defineComponent({
 
                 <p class="updatedAt">
                   <span innerHTML=${History}></span>
-                  Updated ${formatDateTime(counter.value.updatedAt)}
+                  ${formatDateTime(counter.value.updatedAt)}
                 </p>
 
                 <footer>

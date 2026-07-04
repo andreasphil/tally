@@ -8,22 +8,33 @@ import { computed, ref, toValue, watch } from "vue";
  * @property {string} updatedAt
  */
 
+const relativeTimeFormatter = new Intl.RelativeTimeFormat(undefined, {
+  style: "long",
+  numeric: "auto",
+});
+
+const dateFormatter = new Intl.DateTimeFormat(undefined, {
+  weekday: "long",
+  day: "2-digit",
+  month: "2-digit",
+  year: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
 /**
  * @param {string} dateStr
  * @returns {string}
  */
 export function formatDateTime(dateStr) {
-  const formatter = Intl.DateTimeFormat("de-DE", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
   try {
     const date = Temporal.PlainDateTime.from(dateStr);
-    return formatter.format(date);
+    const daysSince = date.since(Temporal.Now.plainDateISO());
+
+    const formattedDate = dateFormatter.format(date);
+    const formattedRelativeTime = relativeTimeFormatter.format(daysSince.days, "days");
+
+    return `${formattedRelativeTime}, ${formattedDate}`;
   } catch {
     return "";
   }
