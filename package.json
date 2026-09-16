@@ -5,13 +5,13 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@andreasphil/design-system": "github:andreasphil/design-system#v0.60.0",
-    "htm": "^3.1.1",
-    "temporal-polyfill": "^1.0.3",
-    "vue": "^3.5.41"
+    "@andreasphil/design-system": "github:andreasphil/design-system#v0.63.0",
+    "htm": "3.1.1",
+    "temporal-polyfill": "1.0.5",
+    "vue": "3.5.42"
   },
   "devDependencies": {
-    "typescript": "^7.0.2",
-    "vite": "^8.2.1"
+    "typescript": "7.0.2",
+    "vite": "8.3.0"
   }
 }
