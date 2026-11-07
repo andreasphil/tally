@@ -9,8 +9,12 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "target": "esnext",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+
+    // jsx
+    "jsx": "preserve",
+    "jsxImportSource": "vue-jsx"
   },
   "exclude": ["**/*.config.js", "./dist/**/*"],
-  "include": ["**/*.js", "**/*.ts"]
+  "include": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"]
 }

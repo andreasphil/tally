@@ -1,12 +1,9 @@
 import { defineConfig } from "vite";
+import vueJsx from "vue-jsx/vite";
 
 export default defineConfig({
+  plugins: [vueJsx({ vapor: true })],
   build: {
     target: "esnext",
-  },
-  resolve: {
-    alias: {
-      vue: "vue/dist/vue.runtime.esm-browser.prod.js",
-    },
   },
 });
