@@ -131,7 +131,7 @@ function createCounterStore() {
 
 export const useCounters = createCounterStore();
 
-/** @param {string} id */
+/** @param {import("vue").MaybeRefOrGetter<string | undefined>} id */
 export function useCounter(id) {
   const { counters } = useCounters();
 
