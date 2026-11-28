@@ -1,10 +1,6 @@
-<h1 align="center">
-  Tally 🫛
-</h1>
+# Tally 🫛
 
-<p align="center">
-  <strong>A simple app for counting things</strong>
-</p>
+**A simple app for counting things**
 
 - ✅ Create as many named counters as you need
 - ↕️ Increment, decrement, or set a counter to a specific value
@@ -12,19 +8,20 @@
 
 ## Usage
 
-Find the app at <https://tally.a13i.dev>.
+🔗 <https://tally.a13i.dev>
 
 ## Development
 
-Tally is a [Vue 3](https://vuejs.org) app based on the [Unbuild](https://github.com/andreasphil/unbuild) template. Packages are managed with [pnpm](https://pnpm.io). The following commands are available:
+Tools: [Vue](https://vuejs.org/) ∙ [Node](https://nodejs.org/) ∙ [pnpm](https://pnpm.io/) ∙ [Vite](https://vite.dev/)
 
 ```sh
-node --run dev      # Start the development server
-node --run build    # Build the app for production
+node --run dev     # start the dev server
+node --run build   # build the app for production
 ```
 
 ## Credits
 
-This app uses open source packages listed in [package.json](package.json). Icons are from [Lucide](https://lucide.dev).
+- Open source packages listed in [package.json](./package.json)
+- Icons by [Lucide](https://lucide.dev)
 
 Thanks 🙏
