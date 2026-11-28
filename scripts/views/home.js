@@ -6,6 +6,8 @@ import { html } from "../lib.js";
 import { useCounters } from "../store.js";
 
 export default defineComponent({
+  name: "Home",
+
   setup() {
     const router = useRouter();
     const store = useCounters();
@@ -17,18 +19,20 @@ export default defineComponent({
       router.push({ name: "counters" });
     }
 
-    return () => html`
-      <hgroup class="text-center margin-y-body" style="--outer-spacing-y: 2rem;">
-        <img class="rounded-squircle shadow-high" src="./icon-192.png" width="72" height="72" />
-        <h1>Tally</h1>
-        <p>A simple app for counting things.</p>
-        <p class="margin-y-outer-spacing">
-          <button variant="haptic" onClick=${() => beginCreateCounter()}>
-            <span innerHTML=${Blocks}></span>
-            Add counter
-          </button>
-        </p>
-      </hgroup>
-    `;
+    return { beginCreateCounter, Blocks };
   },
+
+  template: html`
+    <hgroup class="text-center margin-y-body">
+      <img class="rounded-squircle shadow-high" src="./icon-192.png" width="72" height="72" />
+      <h1>Tally</h1>
+      <p>A simple app for counting things.</p>
+      <p class="margin-y-outer-spacing">
+        <button variant="haptic" @click="beginCreateCounter()">
+          <span v-html="Blocks"></span>
+          Add counter
+        </button>
+      </p>
+    </hgroup>
+  `,
 });

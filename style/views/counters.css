@@ -1,0 +1,41 @@
+@scope (.counters) {
+  ul {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item {
+    all: unset;
+    background: var(--c-surface-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-elevation-medium);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75ch;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    &:is(:focus-visible, :hover) {
+      color: var(--c-fg);
+      outline: var(--outline);
+    }
+
+    .count {
+      font-size: var(--font-size-h2);
+      font-weight: var(--font-weight-medium);
+    }
+  }
+
+  button {
+    background-color: var(--c-surface-variant-bg);
+    border: var(--border-width) solid var(--c-border);
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+}

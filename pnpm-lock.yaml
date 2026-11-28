@@ -11,9 +11,6 @@ importers:
       '@andreasphil/design-system':
         specifier: github:andreasphil/design-system#v0.67.0
         version: https://codeload.github.com/andreasphil/design-system/tar.gz/519b470b12e170c74bc7c1ba360e579740c44deb
-      htm:
-        specifier: 3.1.1
-        version: 3.1.1
       temporal-polyfill:
         specifier: 1.0.8
         version: 1.0.8
@@ -447,9 +444,6 @@ packages:
 
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
-
-  htm@3.1.1:
-    resolution: {integrity: sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==}
 
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
@@ -1061,8 +1055,6 @@ snapshots:
     optional: true
 
   hookable@5.5.3: {}
-
-  htm@3.1.1: {}
 
   lightningcss-android-arm64@1.33.0:
     optional: true

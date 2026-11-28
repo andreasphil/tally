@@ -6,7 +6,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      vue: "vue/dist/vue.runtime.esm-browser.prod.js",
+      vue: "vue/dist/vue.esm-browser.prod.js",
+      "vue-router": "vue-router/dist/vue-router.esm-browser.prod.js",
     },
   },
 });
