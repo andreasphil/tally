@@ -55,6 +55,34 @@
   }
 
   .counterDetail {
+    container-type: inline-size;
+
+    & > header {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    & > footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+
+      & > * {
+        flex: 1;
+      }
+
+      & > div:empty {
+        flex: 2;
+      }
+
+      @container (width >= 20rem) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: end;
+      }
+    }
+
     .counter {
       --counter-bg: light-dark(var(--neutral-950), var(--white));
       --counter-border: light-dark(var(--neutral-600), var(--neutral-300));
