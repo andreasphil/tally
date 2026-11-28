@@ -11,6 +11,5 @@
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "exclude": ["**/*.config.js", "./dist/**/*"],
-  "include": ["**/*.js", "**/*.ts"]
+  "exclude": ["dist", "*.config.ts"]
 }
