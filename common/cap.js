@@ -45,7 +45,8 @@ function render(state) {
       return;
     }
 
-    returnValue = event.target?.value;
+    returnValue = event.target.value;
+    event.preventDefault();
     dialog.close();
   });
 
@@ -59,12 +60,10 @@ function render(state) {
     dialog.close();
   });
 
-  dialog.addEventListener("close", () => {
+  dialog.addEventListener("close", async () => {
     state.onClose(returnValue);
-
-    dialog.addEventListener("transitionend", (event) => {
-      if (event.propertyName === "display") dialog.remove();
-    });
+    await Promise.allSettled(dialog.getAnimations().map((a) => a.finished));
+    dialog.remove();
   });
 
   return dialog;
